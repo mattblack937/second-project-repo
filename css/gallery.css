@@ -1,0 +1,19 @@
+.container{
+  font-family:'Cinzel Decorative',cursive;
+  margin: 0 auto;
+  padding: 
+  position: relative;
+  width:1140px;
+}
+.galleryTitle {
+  text-align: center;  
+}
+.galleryElement {
+  float: left;
+  margin:0 3px ;
+  overflow: hidden;
+  width: 22%;  
+}
+.galleryElement img{
+  height: 200px;
+}
