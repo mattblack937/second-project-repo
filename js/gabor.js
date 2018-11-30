@@ -1,15 +1,19 @@
 var i = 0
+var insertedHtmlContent =
+`<tr>
+<td>${gameOfThronesCharacters[i].name}</td>
+<td><img class='proba' src="${gameOfThronesCharacters[i].portrait}" alt="${gameOfThronesCharacters[i].name}"></td>
+<td>${gameOfThronesCharacters[i].organization}</td>
+<td>${gameOfThronesCharacters[i].bio}</td>
+<td><img src="./img/icons/edit.png" alt="edit" class="table-edit"></td>
+<td><img src="./img/icons/delete.png" alt="delete" onclick="deleteRow()" class="table-remove"></td>
+</tr>`;
+
 while (i < gameOfThronesCharacters.length) {
   if (gameOfThronesCharacters.hasOwnProperty(i)) {
-    document.querySelector('.table__body').innerHTML +=
-    `<tr>
-    <td>${gameOfThronesCharacters[i].name}</td>
-    <td><img class='proba' src="${gameOfThronesCharacters[i].portrait}" alt="${gameOfThronesCharacters[i].name}"></td>
-    <td>${gameOfThronesCharacters[i].organization}</td>
-    <td>${gameOfThronesCharacters[i].bio}</td>
-    <td><img src="./img/icons/edit.png" alt="edit" class="table-edit"></td>
-    <td><img src="./img/icons/delete.png" alt="delete" onclick="deleteRow()" class="table-remove"></td>
-    </tr>`;
+    if (gameOfThronesCharacters[i].organization) {
+      document.querySelector('.table__body').innerHTML += insertedHtmlContent;
+    }
   }
   i++;
 }
