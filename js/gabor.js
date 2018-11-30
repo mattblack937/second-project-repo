@@ -6,8 +6,8 @@ while (i < gameOfThronesCharacters.length) {
     <td>${gameOfThronesCharacters[i].name}</td>
     <td><img class='proba' src="${gameOfThronesCharacters[i].portrait}" alt="${gameOfThronesCharacters[i].name}"></td>
     <td>${gameOfThronesCharacters[i].organization}</td>
-    <td>${gameOfThronesCharacters[i].bio}</td>
-    <td><img src="./img/icons/edit.png" alt="edit" class="table-edit"></td>
+    <td contenteditable="false">${gameOfThronesCharacters[i].bio}</td>
+    <td><img src="./img/icons/edit.png" alt="edit" onclick="editRow()" class="table-edit${[i]}"></td>
     <td><img src="./img/icons/delete.png" alt="delete" onclick="deleteRow()" class="table-remove"></td>
     </tr>`;
   }
@@ -17,7 +17,11 @@ while (i < gameOfThronesCharacters.length) {
 function deleteRow() {
   var td = event.target.parentNode;
   var tr = td.parentNode;
-  tr.parentNode.removeChild(tr)
+  tr.parentNode.removeChild(tr);
+}
+
+function editRow() {
+  
 }
 
 function compareByName(a, b) {

@@ -38,6 +38,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-family: 'Cinzel Decorative', cursive;
 }
 
-img.table-edit, img.table-remove, img.table-arrow{
+img[class^="table-edit"], img.table-remove, img.table-arrow {
     max-width: 40px;
 }
